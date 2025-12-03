@@ -1,7 +1,6 @@
 body {
     margin: 0;
     font-family: 'Mulish', sans-serif;
-    font-weight: bolder;
 
     header {
         padding: 10px 20px;
@@ -10,7 +9,7 @@ body {
 
         .container {
             max-width: 1200px;
-            margin: 10px 200px;
+            margin: 10px 12%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -22,7 +21,7 @@ body {
             }
 
             .web-logo {
-                width: 120px;
+                width: 150px;
                 height: 40px;
                 background-image: url('../img/ico/RờTêTê.png');
                 background-size: contain;
@@ -33,6 +32,7 @@ body {
                 display: flex;
                 gap: 40px;
                 list-style-type: none;
+                font-weight: 600;
 
                 li {
                     cursor: pointer;

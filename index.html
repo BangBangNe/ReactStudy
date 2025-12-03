@@ -11,28 +11,588 @@
         rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/header.css" type="text/css">
+    <link rel="stylesheet" href="./css/allStyle.css" type="text/css">
+    <!-- <link rel="stylesheet" href="./css/cssTest/font-awesome.min.css" type="text/css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/cssTest/bootstrap.min.css" type="text/css">
+
+    <!-- Js Plugins -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./page/js/index.js"></script>
 
 </head>
 
+<style>
+
+</style>
+
 <body>
     <!-- Header Section -->
-    <header>
+    <div id="header"></div>
+    <script>
+        fetch('./page/func/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });            
+    </script>
+
+
+    <!-- Notification Section -->
+    <notify class="notify-show">
+        <div class="notify-icon"></div>
+        <div class="notify-text">
+            Chào mừng bạn đến với Rờ Trym To! Hãy đọc truyện và ủng hộ nhóm dịch nhé!
+        </div>
+        <button class="notify-close" onclick="this.parentElement.style.display='none';"
+            style="margin-left:auto; background:none; border:none; color:#fff; font-size:16px; cursor:pointer;">&times;</button>
+    </notify>
+
+
+    <!-- Swiper Section -->
+    <div id="swiper-container"></div>
+    <script>
+        fetch('./page/func/swiper.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('swiper-container').innerHTML = data;
+            });
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./page/js/swiper.js"></script>
+
+
+
+    <!-- Product Section Begin -->
+    <section class="product spad">
         <div class="container">
-            <div class="head-el web-logo"></div>
-            <div class="head-el header-bar">
-                <li>Trang Chủ</li>
-                <li>Thể loại</li>
-                <li>Lịch ra chiện</li>
-                <li>Fanpage</li>
+            <div class="row">
+                <div class="col-lg">
+                    <div class="trending__product product__container">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Mới cập nhật</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">Tất cả chiện <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <!-- START TEST -->
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-chua">Chưa hoàn</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">Truyện gay này hoang dã wa</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-chua">Chưa hoàn</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep">Ủa alo</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-chua">Chưa hoàn</div>
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-chua">Chưa hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep">Hả???</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep">VLL</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-chua">Chưa hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-chua">Chưa hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-3">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div class="product__date"> Mới </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END TEST -->
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="head-el login-signup">
-                <div class="search-icon"></div>
-                <div class="login-signup-icon"></div>
+
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="popular__product product__container">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Truyện đã hoàn</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">Tất cả chiện <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- START TEST -->
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                        <div class="ep ep-da">Đã hoàn</div>
+
+                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <h5><a href="#">DEMO</a></h5>
+                                        <ul>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 2 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                            <li class="product__chapter__info">
+                                                <div class="product__chapter"> Chap 1 </div>
+                                                <div> 1/1/1999 </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END TEST -->
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-8">
+                    <div class="product__sidebar">
+                        <div class="product__sidebar__view">
+                            <div class="section-title">
+                                <h5>Like page dùm</h5>
+                            </div>
+                        </div>
+                        <a href="https://www.facebook.com/profile.php?id=61550779434564" target="_blank">
+                            <div class="fb-link"></div>
+                        </a>
+
+                    </div>
+
+                    <br><br><br><br>
+
+                    <div class="product__sidebar">
+                        <div class="product__sidebar__view">
+                            <div class="section-title ">
+                                <h5>Top views</h5>
+                            </div>
+
+                            <div class="filter__gallery">
+                                <!-- START TEST -->
+                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Gay vừa</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Gay vừa</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Gay trung trung</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Gay nặng</a></h5>
+                                </div>
+                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
+                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                    <h5><a href="#">Hả???</a></h5>
+                                </div>
+                                <!-- END TEST -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+    <!-- Product Section End -->
 
+
+    <!-- Footer Section Begin -->
+    <div id="footer"></div>
+    <script>
+        fetch('./page/func/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

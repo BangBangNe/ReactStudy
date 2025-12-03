@@ -1,15 +1,14 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  font-family: 'Mulish', sans-serif;
-  font-weight: bolder; }
+  font-family: 'Mulish', sans-serif; }
   body header {
     padding: 10px 20px;
     background-color: #B49AD9;
     color: white; }
     body header .container {
       max-width: 1200px;
-      margin: 10px 200px;
+      margin: 10px 12%;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -18,7 +17,7 @@ body {
         display: flex;
         align-items: center; }
       body header .container .web-logo {
-        width: 120px;
+        width: 150px;
         height: 40px;
         background-image: url("../img/ico/RờTêTê.png");
         background-size: contain;
@@ -26,7 +25,8 @@ body {
       body header .container .header-bar {
         display: flex;
         gap: 40px;
-        list-style-type: none; }
+        list-style-type: none;
+        font-weight: 600; }
         body header .container .header-bar li {
           cursor: pointer; }
       body header .container .login-signup {
@@ -46,5 +46,3 @@ body {
           background-size: cover;
           margin-right: 30px;
           cursor: pointer; }
-
-/*# sourceMappingURL=header.css.map */
