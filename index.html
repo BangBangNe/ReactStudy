@@ -6,19 +6,18 @@
     <title>RTT - Rờ Trym To</title>
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="./fonts/Oswald.css" rel="stylesheet">
+    <link href="./fonts/Mulish.css" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/allStyle.css" type="text/css">
-    <!-- <link rel="stylesheet" href="./css/cssTest/font-awesome.min.css" type="text/css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
 
     <!-- Js Plugins -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./page/js/swiper.js"></script>
+    <script src="./page/js/jquery-3.6.0.min.js"></script>
     <script src="./page/js/index.js"></script>
 
 </head>
@@ -30,14 +29,6 @@
 <body>
     <!-- Header Section -->
     <div id="header"></div>
-    <script>
-        fetch('./page/func/header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });            
-    </script>
-
 
     <!-- Notification Section -->
     <notify class="notify-show">
@@ -49,20 +40,8 @@
             style="margin-left:auto; background:none; border:none; color:#fff; font-size:16px; cursor:pointer;">&times;</button>
     </notify>
 
-
     <!-- Swiper Section -->
     <div id="swiper-container"></div>
-    <script>
-        fetch('./page/func/swiper.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('swiper-container').innerHTML = data;
-            });
-    </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./page/js/swiper.js"></script>
-
-
 
     <!-- Product Section Begin -->
     <section class="product spad">
@@ -585,13 +564,41 @@
 
     <!-- Footer Section Begin -->
     <div id="footer"></div>
-    <script>
-        fetch('./page/func/footer.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+
+
 </body>
+
+<script>
+    function loadHTML(url, target) {
+        fetch(url)
+            .then(res => res.text())
+            .then(html => {
+                const element = document.getElementById(target);
+
+                // Tạo DOM an toàn
+                const temp = document.createElement("div");
+                temp.innerHTML = html;
+
+                // Tách script
+                const scripts = temp.querySelectorAll("script");
+                scripts.forEach(script => {
+                    const newScript = document.createElement("script");
+                    if (script.src) {
+                        newScript.src = script.src;
+                    } else {
+                        newScript.textContent = script.textContent;
+                    }
+                    document.body.appendChild(newScript);
+                    script.remove();
+                });
+
+                element.innerHTML = temp.innerHTML;
+            });
+    }
+    loadHTML('./page/func/swiper.html', 'swiper-container');
+    loadHTML('./page/func/header.html', 'header');
+    loadHTML('./page/func/footer.html', 'footer');
+
+</script>
 
 </html>

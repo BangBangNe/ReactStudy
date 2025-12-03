@@ -12,4 +12,4 @@ setTimeout(function () {
   if (notify) {
     notify.style.display = "none";
   }
-}, 8000); // 8000 milliseconds = 8 seconds
+}, 8000); 
