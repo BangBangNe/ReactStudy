@@ -1,15 +1,11 @@
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
-
-@import 'variable.scss';
-
 html,
 body {
   height: 100%;
   font-family: 'Mulish', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased; }
 
 h1,
 h2,
@@ -20,32 +16,25 @@ h6 {
   margin: 0;
   color: #111111;
   font-weight: 400;
-  font-family: 'Mulish', sans-serif;
-}
+  font-family: 'Mulish', sans-serif; }
 
 h1 {
-  font-size: 70px;
-}
+  font-size: 70px; }
 
 h2 {
-  font-size: 36px;
-}
+  font-size: 36px; }
 
 h3 {
-  font-size: 30px;
-}
+  font-size: 30px; }
 
 h4 {
-  font-size: 24px;
-}
+  font-size: 24px; }
 
 h5 {
-  font-size: 18px;
-}
+  font-size: 18px; }
 
 h6 {
-  font-size: 16px;
-}
+  font-size: 16px; }
 
 p {
   font-size: 15px;
@@ -53,70 +42,59 @@ p {
   color: #3d3d3d;
   font-weight: 400;
   line-height: 25px;
-  margin: 0 0 15px 0;
-}
+  margin: 0 0 15px 0; }
 
 img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 input:focus,
 select:focus,
 button:focus,
 textarea:focus {
-  outline: none;
-}
+  outline: none; }
 
 a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: $white-color;
-}
+  color: #ffffff; }
 
 ul,
 ol {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 /*---------------------
   Helper CSS
 -----------------------*/
 .section-title {
-  margin-bottom: 10px;
-
-  h4,
-  h5 {
-    color: $secondary-color;
+  margin-bottom: 10px; }
+  .section-title h4,
+  .section-title h5 {
+    color: #442175;
     font-weight: 600;
     line-height: 21px;
     text-transform: uppercase;
     padding-left: 20px;
     position: relative;
-    font-family: 'Oswald', sans-serif;
-
-    &:after {
+    font-family: 'Oswald', sans-serif; }
+    .section-title h4:after,
+    .section-title h5:after {
       position: absolute;
       left: 0;
       top: -6px;
       height: 32px;
       width: 4px;
-      background: $primary-color;
-      content: "";
-    }
-  }
-}
+      background: #B49AD9;
+      content: ""; }
 
 .set-bg {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
-}
+  background-position: top center; }
 
 .spad {
-  padding-bottom: 100px;
-}
+  padding-bottom: 100px; }
 
 .text-white h1,
 .text-white h2,
@@ -128,8 +106,7 @@ ol {
 .text-white span,
 .text-white li,
 .text-white a {
-  color: $secondary-color;
-}
+  color: #442175; }
 
 /* buttons */
 .primary-btn {
@@ -137,31 +114,27 @@ ol {
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  color: $white-color;
-  background: $primary-color;
+  color: #ffffff;
+  background: #B49AD9;
   border-radius: 20px;
-  padding: 6 8 8 12;
-
-  span {
+  padding: 6 8 8 12; }
+  .primary-btn span {
     font-size: 18px;
     margin-left: 5px;
     position: relative;
-    top: 3px;
-  }
-}
+    top: 3px; }
 
 .site-btn {
   font-size: 13px;
-  color: $white-color;
-  background: $primary-color;
+  color: #ffffff;
+  background: #B49AD9;
   font-weight: 700;
   border: none;
   border-radius: 2px;
   letter-spacing: 2px;
   text-transform: uppercase;
   display: inline-block;
-  padding: 12px 30px;
-}
+  padding: 12px 30px; }
 
 /* Preloder */
 #preloder {
@@ -171,8 +144,7 @@ ol {
   top: 0;
   left: 0;
   z-index: 999999;
-  background: #000;
-}
+  background: #000; }
 
 .loader {
   width: 40px;
@@ -184,60 +156,44 @@ ol {
   margin-left: -13px;
   border-radius: 60px;
   animation: loader 0.8s linear infinite;
-  -webkit-animation: loader 0.8s linear infinite;
-}
+  -webkit-animation: loader 0.8s linear infinite; }
 
 @keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
-
+    border-left-color: transparent; }
   50% {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
     border: 4px solid #673ab7;
-    border-left-color: transparent;
-  }
-
+    border-left-color: transparent; }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
     border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
-}
-
+    border-left-color: transparent; } }
 @-webkit-keyframes loader {
   0% {
     -webkit-transform: rotate(0deg);
     border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
-
+    border-left-color: transparent; }
   50% {
     -webkit-transform: rotate(180deg);
     border: 4px solid #673ab7;
-    border-left-color: transparent;
-  }
-
+    border-left-color: transparent; }
   100% {
     -webkit-transform: rotate(360deg);
     border: 4px solid #f44336;
-    border-left-color: transparent;
-  }
-}
-
+    border-left-color: transparent; } }
 .spacial-controls {
   position: fixed;
   width: 111px;
   height: 91px;
   top: 0;
   right: 0;
-  z-index: 999;
-}
+  z-index: 999; }
 
 .spacial-controls .search-switch {
   display: block;
@@ -245,8 +201,7 @@ ol {
   padding-top: 30px;
   background: #323232;
   text-align: center;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .search-model {
   display: none;
@@ -256,12 +211,10 @@ ol {
   left: 0;
   top: 0;
   background: #000;
-  z-index: 99999;
-}
+  z-index: 99999; }
 
 .search-model-form {
-  padding: 0 15px;
-}
+  padding: 0 15px; }
 
 .search-model-form input {
   width: 500px;
@@ -269,8 +222,7 @@ ol {
   border: none;
   border-bottom: 2px solid #333;
   background: 0 0;
-  color: #999;
-}
+  color: #999; }
 
 .search-close-switch {
   position: absolute;
@@ -292,9 +244,7 @@ ol {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-}
-
+  justify-content: center; }
 
 /* noti */
 .notify-show {
@@ -309,44 +259,30 @@ ol {
   display: flex;
   align-items: center;
   animation: fadeInOut 8s forwards;
-  z-index: 1000;
-
-  .notify-icon {
+  z-index: 1000; }
+  .notify-show .notify-icon {
     width: 24px;
     height: 24px;
-    background-image: url('../img/ico/ava.ico');
+    background-image: url("../img/ico/ava.ico");
     background-size: cover;
-    margin-right: 10px;
-  }
-
-  .notify-text {
-    font-size: 14px;
-  }
-
-  @keyframes fadeInOut {
-    0% {
-      opacity: 0;
-    }
-
-    10% {
-      opacity: 1;
-    }
-
-    90% {
-      opacity: 1;
-    }
-
-    100% {
-      opacity: 0;
-    }
-  }
-
-  .notify-close {
+    margin-right: 10px; }
+  .notify-show .notify-text {
+    font-size: 14px; }
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; }
+  10% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+  .notify-show .notify-close {
     margin-left: auto;
     background: none;
     border: none;
     color: #fff;
     font-size: 16px;
-    cursor: pointer;
-  }
-}
+    cursor: pointer; }
+
+/*# sourceMappingURL=base.css.map */
