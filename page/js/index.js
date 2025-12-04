@@ -1,16 +1,21 @@
 // Chèn url root
 function getRoot() {
-  return (
-    window.location.protocol +
-    "//" +
-    window.location.host +
-    window.location.pathname.split("/").slice(0, 2).join("/") +
-    "/"
-  );
+  const origin = window.location.origin; 
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+  let repo = "";
+  if (origin.includes("github.io") && pathParts.length > 0) {
+    repo = "/" + pathParts[0] + "/";
+  } else {
+    repo = "/RTT/"; // local thì root là /
+  }
+
+  return origin + repo;
 }
 
 const ROOT = getRoot();
 console.log(ROOT);
+
 
 // load ảnh
 $(document).ready(function () {
