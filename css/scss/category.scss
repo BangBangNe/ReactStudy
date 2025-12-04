@@ -1,0 +1,73 @@
+@import 'variable.scss';
+
+.filter-row {
+    justify-content: center;
+
+    .filter-container.product__container {
+        font-size: 12px;
+        width: 80%;
+        color: #442175;
+        padding: 30 100 10 50;
+    }
+
+    position: relative;
+
+    .filter-icon {
+        position: absolute;
+        height: 200px;
+        display: inline-block;
+        bottom: 0;
+    }
+
+    .left {
+        left: 5%;
+    }
+
+    .right {
+        right: 5%;
+    }
+}
+
+.filter-block {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 2px solid rgba($primary-color, 0.5);
+
+    .filter-title {
+        text-align: left;
+        align-content: center;
+        font-weight: 700;
+        margin-bottom: 5px;
+        flex: 0.5;
+    }
+
+    .swiper {
+        flex: 9;
+
+        .swiper-slide {
+            display: block;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 20px;
+        }
+
+        .filter-item {
+            display: inline-block;
+            padding: 6px 14px;
+            margin: 5 3;
+            border-radius: 20px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .filter-item:hover {
+            background: $primary-color;
+            color: white;
+        }
+
+    }
+}

@@ -1,4 +1,16 @@
-const ROOT = window.location.origin + window.location.pathname.split('/').slice(0,2).join('/') + '/';
+// Chèn url root
+function getRoot() {
+  return (
+    window.location.protocol +
+    "//" +
+    window.location.host +
+    window.location.pathname.split("/").slice(0, 2).join("/") +
+    "/"
+  );
+}
+
+const ROOT = getRoot();
+console.log(ROOT);
 
 // load ảnh
 $(document).ready(function () {
@@ -22,7 +34,6 @@ setTimeout(function () {
     notify.style.display = "none";
   }
 }, 8000);
-
 
 // Load func dynamic
 function loadHTML(url, target) {
@@ -50,5 +61,10 @@ function loadHTML(url, target) {
 
       element.innerHTML = temp.innerHTML;
       applySetBg();
+
+      // load link web-logo
+      document.querySelectorAll("#header [data-href]").forEach((el) => {
+        el.parentElement.href = ROOT + el.getAttribute("data-href");
+      });
     });
 }

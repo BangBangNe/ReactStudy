@@ -695,6 +695,8 @@ body {
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center; }
+      body header .container a.navigate-btn {
+        color: #ffffff !important; }
       body header .container .head-el {
         display: flex;
         align-items: center; }
