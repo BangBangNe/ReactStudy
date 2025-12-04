@@ -64,14 +64,16 @@
                         <div class="row">
 
                             <!-- START TEST -->
-                            <div class="col-lg-2 col-md-4 col-sm-3">
+                            <div class="col-lg-2 col-md-4 col-sm-3"> <!-- Form data chuẩn -->
                                 <div class="product__item">
-                                    <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
-                                        <div class="ep ep-chua">Chưa hoàn</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 3636</div>
-                                    </div>
+                                    <a href="./page/storyInfo.html">
+                                        <div class="product__item__pic set-bg" data-setbg="./Comic/0.jpg">
+                                            <div class="ep ep-chua">Chưa hoàn</div>
+                                            <div class="view"><i class="fa fa-eye"></i> 3636</div>
+                                        </div>
+                                    </a>
                                     <div class="product__item__text">
-                                        <h5><a href="#">Truyện gay này hoang dã wa</a></h5>
+                                        <h5><a href="./page/storyInfo.html">Truyện gay này hoang dã wa</a></h5>
                                         <ul>
                                             <li class="product__chapter__info">
                                                 <div class="product__chapter"> Chap 2 </div>
@@ -523,82 +525,22 @@
 
                     <br><br><br><br>
 
-                    <div class="product__sidebar">
-                        <div class="product__sidebar__view">
-                            <div class="section-title ">
-                                <h5>Top views</h5>
-                            </div>
-
-                            <div class="filter__gallery">
-                                <!-- START TEST -->
-                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    <h5><a href="#">Gay vừa</a></h5>
-                                </div>
-                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    <h5><a href="#">Gay vừa</a></h5>
-                                </div>
-                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    <h5><a href="#">Gay trung trung</a></h5>
-                                </div>
-                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    <h5><a href="#">Gay nặng</a></h5>
-                                </div>
-                                <div class="product__sidebar__view__item set-bg" data-setbg="./Comic/0.jpg">
-                                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                                    <h5><a href="#">Hả???</a></h5>
-                                </div>
-                                <!-- END TEST -->
-                            </div>
-                        </div>
-                    </div>
+                    <div id="topView"></div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Product Section End -->
 
-
     <!-- Footer Section Begin -->
     <div id="footer"></div>
-
-
 </body>
 
 <script>
-    function loadHTML(url, target) {
-        fetch(url)
-            .then(res => res.text())
-            .then(html => {
-                const element = document.getElementById(target);
-
-                // Tạo DOM an toàn
-                const temp = document.createElement("div");
-                temp.innerHTML = html;
-
-                // Tách script
-                const scripts = temp.querySelectorAll("script");
-                scripts.forEach(script => {
-                    const newScript = document.createElement("script");
-                    if (script.src) {
-                        newScript.src = script.src;
-                    } else {
-                        newScript.textContent = script.textContent;
-                    }
-                    document.body.appendChild(newScript);
-                    script.remove();
-                });
-
-                element.innerHTML = temp.innerHTML;
-            });
-    }
     loadHTML('./page/func/swiper.html', 'swiper-container');
     loadHTML('./page/func/header.html', 'header');
     loadHTML('./page/func/footer.html', 'footer');
-
+    loadHTML('./page/func/topView.html', 'topView');
 </script>
 
 </html>

@@ -1,10 +1,19 @@
+const ROOT = window.location.origin + window.location.pathname.split('/').slice(0,2).join('/') + '/';
+
 // load ảnh
 $(document).ready(function () {
   $(".set-bg").each(function () {
     var bg = $(this).data("setbg");
-    $(this).css("background-image", "url(" + bg + ")");
+    $(this).css("background-image", "url(" + ROOT + bg + ")");
   });
 });
+
+function applySetBg() {
+  $(".set-bg").each(function () {
+    var bg = $(this).data("setbg");
+    $(this).css("background-image", "url(" + ROOT + bg + ")");
+  });
+}
 
 // Tự động ẩn thông báo sau 5 giây
 setTimeout(function () {
@@ -12,4 +21,34 @@ setTimeout(function () {
   if (notify) {
     notify.style.display = "none";
   }
-}, 8000); 
+}, 8000);
+
+
+// Load func dynamic
+function loadHTML(url, target) {
+  fetch(url)
+    .then((res) => res.text())
+    .then((html) => {
+      const element = document.getElementById(target);
+
+      // Tạo DOM an toàn
+      const temp = document.createElement("div");
+      temp.innerHTML = html;
+
+      // Tách script
+      const scripts = temp.querySelectorAll("script");
+      scripts.forEach((script) => {
+        const newScript = document.createElement("script");
+        if (script.src) {
+          newScript.src = script.src;
+        } else {
+          newScript.textContent = script.textContent;
+        }
+        document.body.appendChild(newScript);
+        script.remove();
+      });
+
+      element.innerHTML = temp.innerHTML;
+      applySetBg();
+    });
+}

@@ -18,6 +18,10 @@ body::before {
   opacity: 0.5;
   z-index: -1; }
 
+.gif {
+  margin-top: 20px;
+  width: 25% !important; }
+
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
@@ -311,7 +315,7 @@ ol {
 .product {
   padding-bottom: 60px; }
 
-.row .product__container {
+.product__container {
   padding: 50px;
   background-color: rgba(235, 226, 247, 0.8);
   border-radius: 10px; }
@@ -334,6 +338,12 @@ ol {
 
 .product__item {
   margin-bottom: 30px; }
+  .product__item .product__item__pic {
+    background-size: 100%;
+    transition: background-size 0.4s ease; }
+  .product__item:hover .product__item__pic {
+    background-size: 120%;
+    cursor: pointer; }
 
 .col-lg-2.col-md-4.col-sm-3 .product__item__pic {
   height: 200px;

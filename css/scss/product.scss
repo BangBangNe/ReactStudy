@@ -9,13 +9,13 @@
 
 }
 
-.row {
-  .product__container {
-    padding: 50px;
-    background-color: rgba(235, 226, 247, 0.8);
-    border-radius: 10px;
-  }
+
+.product__container {
+  padding: 50px;
+  background-color: rgba(235, 226, 247, 0.8);
+  border-radius: 10px;
 }
+
 
 .product-page {
   padding-top: 60px;
@@ -40,7 +40,20 @@
 
 .product__item {
   margin-bottom: 30px;
+
+  .product__item__pic {
+    background-size: 100%;
+    transition: background-size 0.4s ease; // thời gian tăng
+  }
+
+  &:hover {
+    .product__item__pic {
+      background-size: 120%;
+      cursor: pointer;
+    }
+  }
 }
+
 
 .col-lg-2.col-md-4.col-sm-3 {
   .product__item__pic {

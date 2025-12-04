@@ -66,7 +66,6 @@ async function loadSwiperComponent() {
       observer: true,
       observeParents: true,
     });
-
   } catch (err) {
   }
 }
