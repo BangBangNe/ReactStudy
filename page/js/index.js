@@ -30,6 +30,7 @@ function applySetBg() {
     var bg = $(this).data("setbg");
     $(this).css("background-image", "url(" + ROOT + bg + ")");
   });
+  
 }
 
 // Tự động ẩn thông báo sau 5 giây
