@@ -1,20 +1,24 @@
-// Chèn url root
 function getRoot() {
   const origin = window.location.origin;
   const pathParts = window.location.pathname.split("/").filter(Boolean);
 
-  let repo = "";
+  // 🔹 GitHub Pages (có repo)
   if (origin.includes("github.io") && pathParts.length > 0) {
-    repo = "/" + pathParts[0] + "/";
-  } else {
-    repo = "/RTT/"; // local thì root là /
+    return origin + "/" + pathParts[0] + "/";
   }
 
-  return origin + repo;
+  // 🔹 DigitalOcean App / VPS (không có repo)
+  if (origin.includes("ondigitalocean.app")) {
+    return origin + "/";
+  }
+
+  // 🔹 Localhost hoặc VPS root
+  return origin + "/";
 }
 
 const ROOT = getRoot();
 console.log(ROOT);
+
 
 // load ảnh
 $(document).ready(function () {
