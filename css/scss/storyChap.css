@@ -1,0 +1,23 @@
+.storyChap.container {
+  margin-bottom: 50px; }
+  .storyChap.container .storyChap.row {
+    margin-top: 40; }
+    .storyChap.container .storyChap.row .Chap-img {
+      padding: 0 15; }
+  .storyChap.container .storyChap.product__container {
+    width: 100%;
+    padding: 30px 50px; }
+    .storyChap.container .storyChap.product__container .section-title h5,
+    .storyChap.container .storyChap.product__container span {
+      font-size: larger; }
+    .storyChap.container .storyChap.product__container select {
+      padding: 5 30px;
+      color: #513776;
+      background-color: white;
+      border: none;
+      border-radius: 5px; }
+    .storyChap.container .storyChap.product__container .storyChap-navigate {
+      display: flex;
+      justify-content: space-between; }
+      .storyChap.container .storyChap.product__container .storyChap-navigate .pagination button {
+        font-size: 15px; }

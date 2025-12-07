@@ -1,0 +1,39 @@
+.storyChap.container {
+    margin-bottom: 50px;
+
+    .storyChap.row {
+        margin-top: 40;
+
+        .Chap-img {
+            padding: 0 15;
+        }
+    }
+
+    .storyChap.product__container {
+        width: 100%;
+        padding: 30px 50px;
+
+        .section-title h5,
+        span {
+            font-size: larger;
+        }
+
+        select {
+            padding: 5 30px;
+            color: #513776;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .storyChap-navigate {
+            display: flex;
+            justify-content: space-between;
+
+            .pagination button {
+                font-size: 15px;
+            }
+        }
+    }
+
+}

@@ -1,6 +1,6 @@
 // Chèn url root
 function getRoot() {
-  const origin = window.location.origin; 
+  const origin = window.location.origin;
   const pathParts = window.location.pathname.split("/").filter(Boolean);
 
   let repo = "";
@@ -16,7 +16,6 @@ function getRoot() {
 const ROOT = getRoot();
 console.log(ROOT);
 
-
 // load ảnh
 $(document).ready(function () {
   $(".set-bg").each(function () {
@@ -30,7 +29,6 @@ function applySetBg() {
     var bg = $(this).data("setbg");
     $(this).css("background-image", "url(" + ROOT + bg + ")");
   });
-  
 }
 
 // Tự động ẩn thông báo sau 5 giây
@@ -68,9 +66,11 @@ function loadHTML(url, target) {
       element.innerHTML = temp.innerHTML;
       applySetBg();
 
-      // load link web-logo
-      document.querySelectorAll("#header [data-href]").forEach((el) => {
-        el.parentElement.href = ROOT + el.getAttribute("data-href");
+      // load link
+      document.querySelectorAll("[data-href]").forEach((el) => {
+        el.addEventListener("click", () => {
+          window.location.href = ROOT + el.getAttribute("data-href");
+        });
       });
     });
 }

@@ -192,11 +192,13 @@
         li {
             padding: 10px;
             list-style: none;
-            display: flex;
-            justify-content: space-between;
             border-bottom: 1px solid #ccc;
             font-weight: 500;
             width: 50%;
+
+            a {
+                display: flex;
+            }
 
             .chapter-status {
                 font-style: italic;
@@ -272,7 +274,7 @@
         margin-bottom: 0;
     }
 
-    .review-pic{
+    .review-pic {
         width: 30%;
     }
 }
@@ -307,8 +309,8 @@
         }
     }
 
-    .section-title{
-        h6{
+    .section-title {
+        h6 {
             color: $secondary-color;
             padding: 10px;
             font-style: italic;

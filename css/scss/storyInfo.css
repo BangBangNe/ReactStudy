@@ -146,11 +146,11 @@
     .chapter-list ul li {
       padding: 10px;
       list-style: none;
-      display: flex;
-      justify-content: space-between;
       border-bottom: 1px solid #ccc;
       font-weight: 500;
       width: 50%; }
+      .chapter-list ul li a {
+        display: flex; }
       .chapter-list ul li .chapter-status {
         font-style: italic;
         color: #a07fcd;
@@ -256,5 +256,3 @@
   width: 100%;
   padding-top: 50px;
   margin-bottom: 20px; }
-
-/*# sourceMappingURL=storyInfo.css.map */
